@@ -1,0 +1,15 @@
+am = int(input())
+nombers = list(map(int, input().split()))
+count = [0] * 201
+pr = []
+
+for i in nombers:
+    count[i+100] += 1
+
+
+for i in range(201):
+    if count[i] > 0:
+            for j in range(count[i]):
+                pr.append(i - 100)
+                
+print(*pr)
